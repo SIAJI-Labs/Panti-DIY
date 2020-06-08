@@ -1,4 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/assets/adminlte/js/app.js": "/assets/adminlte/js/app.js",
+    "/assets/adminlte/css/app.css": "/assets/adminlte/css/app.css",
+    "/assets/plugins/fontawesome-free/css/all.css": "/assets/plugins/fontawesome-free/css/all.css",
+    "/assets/plugins/bootstrap/js/bootstrap.bundle.js": "/assets/plugins/bootstrap/js/bootstrap.bundle.js",
+    "/assets/plugins/jquery/jquery.js": "/assets/plugins/jquery/jquery.js"
 }

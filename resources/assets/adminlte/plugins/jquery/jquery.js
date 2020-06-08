@@ -1,0 +1,1 @@
+require('admin-lte/plugins/jquery/jquery');
