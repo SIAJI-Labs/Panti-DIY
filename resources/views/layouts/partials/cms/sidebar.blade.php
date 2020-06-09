@@ -67,7 +67,7 @@
 
             <li class="nav-header">MISCELLANEOUS</li>
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'profile' ? 'active' : '') : '' }}">
+                <a href="{{ route('cms.profile.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'profile' ? 'active' : '') : '' }}">
                     <i class="nav-icon far fa-circle text-primary"></i>
                     <p class="text">User Settings</p>
                 </a>

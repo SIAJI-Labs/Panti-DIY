@@ -15,3 +15,11 @@
 .brand-link .brand-image {
   height: 33px;
 }
+
+.card .card-header {
+  display: flex;
+  align-items: center;
+}
+.card .card-header .card-tools {
+  margin-left: auto;
+}

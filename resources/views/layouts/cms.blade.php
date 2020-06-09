@@ -107,10 +107,6 @@
             @csrf
         </form>
 
-		<!-- jQuery -->
-		<script src="{{ mix('assets/plugins/jquery/jquery.js') }}"></script>
-		<!-- Bootstrap 4 -->
-		<script src="{{ mix('assets/plugins/bootstrap/js/bootstrap.bundle.js') }}"></script>
 		<!-- AdminLTE App -->
         <script src="{{ mix('assets/adminlte/js/app.js') }}"></script>
         

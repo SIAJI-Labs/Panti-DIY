@@ -18,3 +18,15 @@
         height: 33px;
     }
 }
+
+// Card
+.card {
+    .card-header {
+        display: flex;
+        align-items: center;
+
+        .card-tools {
+            margin-left: auto;
+        }
+    }
+}

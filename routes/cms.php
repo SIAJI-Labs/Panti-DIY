@@ -23,6 +23,11 @@ Route::group([
         return view('content.cms.dashboard.index');
     })->name('index');
 
+    Route::resource('profile', 'ProfileController')->only([
+        'index', 'update'
+    ]);
+    Route::post('profile/password', 'ProfileController@updatePassword')->name('profile.password');
+
     // JSON
     Route::group([
         'prefix' => 'json',

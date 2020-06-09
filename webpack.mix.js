@@ -34,3 +34,4 @@ mix.sass('resources/assets/adminlte/plugins/fontawesome-free/css/all.scss', 'pub
 mix.js('resources/assets/adminlte/plugins/jquery/jquery.js', 'public/assets/plugins/jquery').version();
 // Bootstrap
 mix.js('resources/assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.js', 'public/assets/plugins/bootstrap/js/').version();
+mix.js('resources/assets/adminlte/plugins/bootstrap/js/bootstrap.js', 'public/assets/plugins/bootstrap/js/').version();
