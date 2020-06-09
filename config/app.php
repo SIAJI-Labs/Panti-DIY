@@ -166,6 +166,11 @@ return [
          * Package Service Providers...
          */
 
+         /*
+         * View Service Providers...
+         */
+        App\Providers\ViewCmsServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

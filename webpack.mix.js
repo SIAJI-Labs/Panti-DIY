@@ -14,8 +14,9 @@ mix.options({
  |
  */
 
-mix.sass('resources/assets/adminlte/css/app.scss', 'public/assets/adminlte/css');
-mix.js('resources/assets/adminlte/js/app.js', 'public/assets/adminlte/js');
+mix.sass('resources/assets/adminlte/css/app.scss', 'public/assets/adminlte/css').version();
+mix.sass('resources/assets/adminlte/css/siaji.scss', 'public/assets/adminlte/css').version();
+mix.js('resources/assets/adminlte/js/app.js', 'public/assets/adminlte/js').version();
 
 /*
  |--------------------------------------------------------------------------
@@ -28,8 +29,8 @@ mix.js('resources/assets/adminlte/js/app.js', 'public/assets/adminlte/js');
  |
  */
 // FontAwesome
-mix.sass('resources/assets/adminlte/plugins/fontawesome-free/css/all.scss', 'public/assets/plugins/fontawesome-free/css');
+mix.sass('resources/assets/adminlte/plugins/fontawesome-free/css/all.scss', 'public/assets/plugins/fontawesome-free/css').version();
 // jQuery
-mix.js('resources/assets/adminlte/plugins/jquery/jquery.js', 'public/assets/plugins/jquery');
+mix.js('resources/assets/adminlte/plugins/jquery/jquery.js', 'public/assets/plugins/jquery').version();
 // Bootstrap
-mix.js('resources/assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.js', 'public/assets/plugins/bootstrap/js/');
+mix.js('resources/assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.js', 'public/assets/plugins/bootstrap/js/').version();

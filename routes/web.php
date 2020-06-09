@@ -12,5 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.cms');
+    return view('welcome');
 });

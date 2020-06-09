@@ -1,0 +1,17 @@
+.sia-logo {
+  width: 2.5rem;
+  margin: 0 0.5rem;
+}
+
+/* Mobile Style */
+@media only screen and (max-width: 425px) {
+  .sia-logo {
+    width: 3.5rem;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+.brand-link .brand-image {
+  height: 33px;
+}
