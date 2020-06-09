@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group([
+    'as' => 'public.'
+], function(){
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('index');
 });

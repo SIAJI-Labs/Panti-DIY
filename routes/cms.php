@@ -11,10 +11,13 @@
 |
 */
 
+Auth::routes();
+
 Route::group([
     'prefix' => 'cms',
     'as' => 'cms.',
-    'namespace' => 'Cms'
+    'namespace' => 'Cms',
+    'middleware' => ['web', 'auth']
 ], function(){
     Route::get('/', function () {
         return view('content.cms.dashboard.index');
