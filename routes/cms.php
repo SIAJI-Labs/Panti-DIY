@@ -23,6 +23,13 @@ Route::group([
         return view('content.cms.dashboard.index');
     })->name('index');
 
+    // Setting
+    // Website Setting
+    Route::resource('website-setting', 'WebsiteSettingController')->only([
+        'index', 'update'
+    ]);
+
+    // User Profile
     Route::resource('profile', 'ProfileController')->only([
         'index', 'update'
     ]);

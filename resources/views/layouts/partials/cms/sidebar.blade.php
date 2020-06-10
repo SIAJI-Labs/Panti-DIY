@@ -36,7 +36,7 @@
 
             <li class="nav-header text-uppercase">Configuration</li>
             <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'setting' ? 'menu-open' : '') : '' }}">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'setting' ? 'active' : '') : '' }}">
                     <i class="nav-icon fas fa-cogs"></i>
                     <p>
                         Settings
@@ -45,7 +45,7 @@
                 </a>
                 <ul class="nav nav-treeview" {{ !empty($sidebar_menu) ? ($sidebar_menu == 'setting' ? 'style="display: block;"' : '') : '' }}>
                     <li class="nav-item">
-                        <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'general' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.website-setting.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'general' ? 'active' : '') : '' }}">
                             <i class="far fa-circle nav-icon"></i>
                             <p>General</p>
                         </a>

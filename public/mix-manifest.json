@@ -1,9 +1,14 @@
 {
-    "/assets/adminlte/js/app.js": "/assets/adminlte/js/app.js?id=69c1ae2b2af968fcbd12",
+    "/assets/adminlte/js/app.js": "/assets/adminlte/js/app.js?id=1f6a6d60775735272193",
     "/assets/adminlte/css/app.css": "/assets/adminlte/css/app.css?id=dc2181e511189ea68bcc",
-    "/assets/adminlte/css/siaji.css": "/assets/adminlte/css/siaji.css?id=6c0f6b954388444171a1",
+    "/assets/adminlte/css/siaji.css": "/assets/adminlte/css/siaji.css?id=c72e0015f7d88a7fba7f",
     "/assets/plugins/fontawesome-free/css/all.css": "/assets/plugins/fontawesome-free/css/all.css?id=6ef7b677ce8a7252eaf6",
+    "/assets/plugins/sweetalert2/css/sweetalert2.css": "/assets/plugins/sweetalert2/css/sweetalert2.css?id=448e2e427444da5fe11b",
+    "/assets/plugins/sweetalert2/css/bootstrap-4.css": "/assets/plugins/sweetalert2/css/bootstrap-4.css?id=f6f43b21876256873794",
     "/assets/plugins/bootstrap/js/bootstrap.js": "/assets/plugins/bootstrap/js/bootstrap.js?id=2089e591b76cff782962",
     "/assets/plugins/bootstrap/js/bootstrap.bundle.js": "/assets/plugins/bootstrap/js/bootstrap.bundle.js?id=e3fc66f75493f55ae68f",
-    "/assets/plugins/jquery/jquery.js": "/assets/plugins/jquery/jquery.js?id=4b2447f671fcd50db57c"
+    "/assets/plugins/bs-custom-file-input/bs-custom-file-input.js": "/assets/plugins/bs-custom-file-input/bs-custom-file-input.js?id=26b4c1a4726f19bc1253",
+    "/assets/plugins/jquery/jquery.js": "/assets/plugins/jquery/jquery.js?id=4b2447f671fcd50db57c",
+    "/assets/plugins/sweetalert2/js/sweetalert2.js": "/assets/plugins/sweetalert2/js/sweetalert2.js?id=ffc8781d5cef43fcfbf2",
+    "/assets/adminlte/js/siaji.js": "/assets/adminlte/js/siaji.js?id=af8d46d16f3c2973f68c"
 }

@@ -109,6 +109,7 @@
 
 		<!-- AdminLTE App -->
         <script src="{{ mix('assets/adminlte/js/app.js') }}"></script>
+        <script src="{{ mix('assets/adminlte/js/siaji.js') }}"></script>
         
         <script>
             $.ajaxSetup({
