@@ -35,6 +35,29 @@
             </li>
 
             <li class="nav-header text-uppercase">Configuration</li>
+            <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'social-media' ? 'menu-open' : '') : '' }}">
+                <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'social-media' ? 'active' : '') : '' }}">
+                    <i class="nav-icon fas fa-hashtag"></i>
+                    <p>
+                        Social Media
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview" {{ !empty($sidebar_menu) ? ($sidebar_menu == 'social-media' ? 'style="display: block;"' : '') : '' }}>
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'social-platform' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.social-platform.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'social-platform' ? 'active' : '') : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Social Platform</p>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'social-account' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.social-account.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'social-account' ? 'active' : '') : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Social Account</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'setting' ? 'menu-open' : '') : '' }}">
                 <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'setting' ? 'active' : '') : '' }}">
                     <i class="nav-icon fas fa-cogs"></i>
@@ -44,14 +67,14 @@
                     </p>
                 </a>
                 <ul class="nav nav-treeview" {{ !empty($sidebar_menu) ? ($sidebar_menu == 'setting' ? 'style="display: block;"' : '') : '' }}>
-                    <li class="nav-item">
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'general' ? 'active' : '') : '' }}">
                         <a href="{{ route('cms.website-setting.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'general' ? 'active' : '') : '' }}">
                             <i class="far fa-circle nav-icon"></i>
                             <p>General</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'contact' ? 'active' : '') : '' }}">
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'contact' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.contact-data.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'contact' ? 'active' : '') : '' }}">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Contact Data</p>
                         </a>

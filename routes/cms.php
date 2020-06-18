@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| CMS Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -23,36 +23,37 @@ Route::group([
         return view('content.cms.dashboard.index');
     })->name('index');
 
-    // Setting
-    // Website Setting
-    Route::resource('website-setting', 'WebsiteSettingController')->only([
-        'index', 'update'
+    /**
+     * Feature Manager
+     * 
+     */
+    // Social Platform
+    Route::resource('social-platform', 'SocialPlatformController')->only([
+        'index', 'store', 'update', 'destroy'
+    ]);
+    Route::resource('social-account', 'SocialAccountController')->only([
+        'index', 'store', 'update', 'destroy'
     ]);
 
-    // User Profile
+    /**
+     * Setting
+     * 
+     */
+    // Website Setting
+    Route::resource('website-setting', 'WebsiteSettingController')->only([
+        'index', 'store'
+    ]);
+    // Contact Data
+    Route::resource('contact-data', 'ContactDataController')->only([
+        'index', 'store', 'update', 'destroy'
+    ]);
+
+    /**
+     * User Profile
+     * 
+     */
     Route::resource('profile', 'ProfileController')->only([
         'index', 'update'
     ]);
     Route::post('profile/password', 'ProfileController@updatePassword')->name('profile.password');
-
-    // JSON
-    Route::group([
-        'prefix' => 'json',
-        'as' => 'json.'
-    ], function(){
-        // JSON Select2
-        Route::group([
-            'prefix' => 'select2',
-            'as' => 'select2.'
-        ], function(){
-
-        });
-        // JSON Datatable
-        Route::group([
-            'prefix' => 'datatable',
-            'as' => 'datatable.'
-        ], function(){
-
-        });
-    });
 });

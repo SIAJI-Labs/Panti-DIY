@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group([
+    'domain' => '{subdomain}.panti-diy.test'
+], function(){
+    Route::get('/', function($subdomain){
+        return response()->json($subdomain);
+    });
+});
 
 Route::group([
     'as' => 'public.'
@@ -18,3 +25,5 @@ Route::group([
         return view('welcome');
     })->name('index');
 });
+
+

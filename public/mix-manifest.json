@@ -1,14 +1,25 @@
 {
-    "/assets/adminlte/js/app.js": "/assets/adminlte/js/app.js?id=1f6a6d60775735272193",
+    "/assets/adminlte/js/app.js": "/assets/adminlte/js/app.js?id=d811bf989860e68769df",
     "/assets/adminlte/css/app.css": "/assets/adminlte/css/app.css?id=dc2181e511189ea68bcc",
-    "/assets/adminlte/css/siaji.css": "/assets/adminlte/css/siaji.css?id=c72e0015f7d88a7fba7f",
+    "/assets/adminlte/css/siaji.css": "/assets/adminlte/css/siaji.css?id=f08d3f84c89351a29cb3",
     "/assets/plugins/fontawesome-free/css/all.css": "/assets/plugins/fontawesome-free/css/all.css?id=6ef7b677ce8a7252eaf6",
     "/assets/plugins/sweetalert2/css/sweetalert2.css": "/assets/plugins/sweetalert2/css/sweetalert2.css?id=448e2e427444da5fe11b",
     "/assets/plugins/sweetalert2/css/bootstrap-4.css": "/assets/plugins/sweetalert2/css/bootstrap-4.css?id=f6f43b21876256873794",
+    "/assets/plugins/datatables/bs4/css/datatables.bs4.css": "/assets/plugins/datatables/bs4/css/datatables.bs4.css?id=751a5e967b7275aef523",
+    "/assets/plugins/datatables/responsive/css/dataTables.responsive.css": "/assets/plugins/datatables/responsive/css/dataTables.responsive.css?id=a7e99884f6cb71539fb1",
     "/assets/plugins/bootstrap/js/bootstrap.js": "/assets/plugins/bootstrap/js/bootstrap.js?id=2089e591b76cff782962",
     "/assets/plugins/bootstrap/js/bootstrap.bundle.js": "/assets/plugins/bootstrap/js/bootstrap.bundle.js?id=e3fc66f75493f55ae68f",
     "/assets/plugins/bs-custom-file-input/bs-custom-file-input.js": "/assets/plugins/bs-custom-file-input/bs-custom-file-input.js?id=26b4c1a4726f19bc1253",
     "/assets/plugins/jquery/jquery.js": "/assets/plugins/jquery/jquery.js?id=4b2447f671fcd50db57c",
     "/assets/plugins/sweetalert2/js/sweetalert2.js": "/assets/plugins/sweetalert2/js/sweetalert2.js?id=ffc8781d5cef43fcfbf2",
-    "/assets/adminlte/js/siaji.js": "/assets/adminlte/js/siaji.js?id=af8d46d16f3c2973f68c"
+    "/assets/adminlte/js/siaji.js": "/assets/adminlte/js/siaji.js?id=536821364f6cdeb9ebd6",
+    "/assets/plugins/fontawesome-iconpicker/js/fontawesome-iconpicker.js": "/assets/plugins/fontawesome-iconpicker/js/fontawesome-iconpicker.js?id=e6259833cc67830f2577",
+    "/assets/plugins/fontawesome-iconpicker/css/fontawesome-iconpicker.css": "/assets/plugins/fontawesome-iconpicker/css/fontawesome-iconpicker.css?id=a51a22608b0602a8bed5",
+    "/assets/plugins/datatables/datatables.js": "/assets/plugins/datatables/datatables.js?id=0cf021acee8640c5d9e2",
+    "/assets/plugins/datatables/bs4/js/dataTables.bootstrap4.js": "/assets/plugins/datatables/bs4/js/dataTables.bootstrap4.js?id=a5bd909639a07bd7c78c",
+    "/assets/plugins/datatables/responsive/js/dataTables.responsive.js": "/assets/plugins/datatables/responsive/js/dataTables.responsive.js?id=2d6dd4f29ea45ea8f1f1",
+    "/assets/plugins/datatables/responsive/js/responsive.bootstrap4.js": "/assets/plugins/datatables/responsive/js/responsive.bootstrap4.js?id=1222ca8cc5309c099acd",
+    "/assets/plugins/select2/css/select2.css": "/assets/plugins/select2/css/select2.css?id=a2194c2626489df39c39",
+    "/assets/plugins/select2/css/select2-bootstrap4.css": "/assets/plugins/select2/css/select2-bootstrap4.css?id=dbe814f8641510b2300a",
+    "/assets/plugins/select2/js/select2.js": "/assets/plugins/select2/js/select2.js?id=8b9e61ffc46edc5610a2"
 }

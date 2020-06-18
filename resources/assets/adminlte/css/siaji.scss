@@ -6,6 +6,11 @@ body {
     width: 2.5rem;
     margin: 0 .5rem;
 }
+.fade {
+    &.in {
+        opacity: 1 !important;
+    }
+}
 /* Mobile Style */
 @media only screen and (max-width: 425px) {
     .sia-logo {
@@ -20,6 +25,30 @@ body {
 .brand-link {
     .brand-image {
         height: 33px;
+    }
+}
+.nav-legacy {
+    &.nav-sidebar {
+        > {
+            .nav-item {
+                .nav-treeview {
+                    .nav-item {
+                        position: relative;
+
+                        &.active {
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                border-left: 3px solid #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

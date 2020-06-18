@@ -53,3 +53,12 @@ function removeCustomPreview(input, old_value = ''){
     image_input.val('');
     fileLabel.text('Choose file');
 }
+
+// Convert First Character of Words to Uppercase
+function ucwords(str){
+    str = str.toLowerCase().replace(/\b[a-z]/g, (letter) => {
+        return letter.toUpperCase();
+    });
+
+    return str;
+}

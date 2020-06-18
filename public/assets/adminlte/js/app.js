@@ -18121,6 +18121,28 @@ try {
 
 /***/ }),
 
+/***/ "./resources/assets/adminlte/plugins/datatables/bs4/css/datatables.bs4.scss":
+/*!**********************************************************************************!*\
+  !*** ./resources/assets/adminlte/plugins/datatables/bs4/css/datatables.bs4.scss ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/assets/adminlte/plugins/datatables/responsive/css/dataTables.responsive.scss":
+/*!************************************************************************************************!*\
+  !*** ./resources/assets/adminlte/plugins/datatables/responsive/css/dataTables.responsive.scss ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/assets/adminlte/plugins/fontawesome-free/css/all.scss":
 /*!*************************************************************************!*\
   !*** ./resources/assets/adminlte/plugins/fontawesome-free/css/all.scss ***!
@@ -18155,9 +18177,9 @@ try {
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/assets/adminlte/js/app.js ./resources/assets/adminlte/css/app.scss ./resources/assets/adminlte/css/siaji.scss ./resources/assets/adminlte/plugins/fontawesome-free/css/all.scss ./resources/assets/adminlte/plugins/sweetalert2/css/sweetalert2.scss ./resources/assets/adminlte/plugins/sweetalert2/css/bootstrap-4.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/assets/adminlte/js/app.js ./resources/assets/adminlte/css/app.scss ./resources/assets/adminlte/css/siaji.scss ./resources/assets/adminlte/plugins/fontawesome-free/css/all.scss ./resources/assets/adminlte/plugins/sweetalert2/css/sweetalert2.scss ./resources/assets/adminlte/plugins/sweetalert2/css/bootstrap-4.scss ./resources/assets/adminlte/plugins/datatables/bs4/css/datatables.bs4.scss ./resources/assets/adminlte/plugins/datatables/responsive/css/dataTables.responsive.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18166,7 +18188,9 @@ __webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adm
 __webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/css/siaji.scss */"./resources/assets/adminlte/css/siaji.scss");
 __webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/plugins/fontawesome-free/css/all.scss */"./resources/assets/adminlte/plugins/fontawesome-free/css/all.scss");
 __webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/plugins/sweetalert2/css/sweetalert2.scss */"./resources/assets/adminlte/plugins/sweetalert2/css/sweetalert2.scss");
-module.exports = __webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/plugins/sweetalert2/css/bootstrap-4.scss */"./resources/assets/adminlte/plugins/sweetalert2/css/bootstrap-4.scss");
+__webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/plugins/sweetalert2/css/bootstrap-4.scss */"./resources/assets/adminlte/plugins/sweetalert2/css/bootstrap-4.scss");
+__webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/plugins/datatables/bs4/css/datatables.bs4.scss */"./resources/assets/adminlte/plugins/datatables/bs4/css/datatables.bs4.scss");
+module.exports = __webpack_require__(/*! /Users/dwiaji/Sites/siaji/panti-diy/resources/assets/adminlte/plugins/datatables/responsive/css/dataTables.responsive.scss */"./resources/assets/adminlte/plugins/datatables/responsive/css/dataTables.responsive.scss");
 
 
 /***/ })
