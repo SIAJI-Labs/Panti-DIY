@@ -20,6 +20,14 @@ Route::group([
     'namespace' => 'Json'
 ], function(){
     /**
+     * Feature Manager
+     * 
+     */
+    // Statistic
+    Route::get('statistic', 'StatisticController@jsonAll')->name('statistic.all');
+    Route::get('statistic/{id}', 'StatisticController@jsonId')->name('statistic.id');
+
+    /**
      * Social
      * 
      */
@@ -46,6 +54,13 @@ Route::group([
         'as' => 'datatable.',
         'namespace' => 'Datatable'
     ], function(){
+        /**
+         * Feature Manager
+         * 
+         */
+        // Social Platform
+        Route::get('statistic', 'StatisticController@datatableAll')->name('statistic.all');
+
         /**
          * Social
          * 

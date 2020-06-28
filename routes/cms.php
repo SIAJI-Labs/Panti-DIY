@@ -28,9 +28,19 @@ Route::group([
      * 
      */
     // Social Platform
+    Route::resource('statistic', 'StatisticController')->only([
+        'index', 'store', 'update', 'destroy'
+    ]);
+
+    /**
+     * Social Media
+     * 
+     */
+    // Social Platform
     Route::resource('social-platform', 'SocialPlatformController')->only([
         'index', 'store', 'update', 'destroy'
     ]);
+    // Social Account
     Route::resource('social-account', 'SocialAccountController')->only([
         'index', 'store', 'update', 'destroy'
     ]);

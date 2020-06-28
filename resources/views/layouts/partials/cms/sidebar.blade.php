@@ -35,6 +35,24 @@
             </li>
 
             <li class="nav-header text-uppercase">Configuration</li>
+            <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'menu-open' : '') : '' }}">
+                <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'active' : '') : '' }}">
+                    <i class="nav-icon fas fa-tasks"></i>
+                    <p>
+                        Feature Manager
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview" {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'style="display: block;"' : '') : '' }}>
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'statistic' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.statistic.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'statistic' ? 'active' : '') : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Statistic Count</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'social-media' ? 'menu-open' : '') : '' }}">
                 <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'social-media' ? 'active' : '') : '' }}">
                     <i class="nav-icon fas fa-hashtag"></i>
