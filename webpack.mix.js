@@ -32,7 +32,10 @@ mix.scripts([
  |
  */
 // FontAwesome
-mix.sass('resources/assets/adminlte/plugins/fontawesome-free/css/all.scss', 'public/assets/plugins/fontawesome-free/css').version();
+// mix.sass('resources/assets/adminlte/plugins/fontawesome-free/css/all.scss', 'public/assets/plugins/fontawesome-free/css').version();
+mix.styles([
+    'resources/assets/adminlte/plugins/fontawesome-free/css/all.css'
+], 'public/assets/plugins/fontawesome-free/css/all.css').version();
 // jQuery
 mix.js('resources/assets/adminlte/plugins/jquery/jquery.js', 'public/assets/plugins/jquery').version();
 // Bootstrap
