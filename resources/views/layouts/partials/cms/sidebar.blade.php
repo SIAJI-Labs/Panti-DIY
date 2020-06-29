@@ -34,6 +34,25 @@
                 </a>
             </li>
 
+            <li class="nav-header text-uppercase">Social Care</li>
+            <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'orphanage' ? 'menu-open' : '') : '' }}">
+                <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'orphanage' ? 'active' : '') : '' }}">
+                    <i class="nav-icon far fa-list-alt"></i>
+                    <p>
+                        Orphanage
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview" {{ !empty($sidebar_menu) ? ($sidebar_menu == 'orphanage' ? 'style="display: block;"' : '') : '' }}>
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'list' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.orphanage.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'statistic' ? 'active' : '') : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>List</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-header text-uppercase">Configuration</li>
             <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'menu-open' : '') : '' }}">
                 <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'active' : '') : '' }}">

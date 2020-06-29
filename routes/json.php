@@ -20,6 +20,14 @@ Route::group([
     'namespace' => 'Json'
 ], function(){
     /**
+     * Orphanage
+     * 
+     */
+    // Orphanage
+    Route::get('orphanage', 'OrphanageController@jsonAll')->name('orphanage.all');
+    Route::get('orphanage/{id}', 'OrphanageController@jsonId')->name('orphanage.id');
+
+    /**
      * Feature Manager
      * 
      */
@@ -54,6 +62,13 @@ Route::group([
         'as' => 'datatable.',
         'namespace' => 'Datatable'
     ], function(){
+        /**
+         * Orphanage
+         * 
+         */
+        // Orphanage
+        Route::get('orphanage', 'OrphanageController@datatableAll')->name('orphanage.all');
+
         /**
          * Feature Manager
          * 

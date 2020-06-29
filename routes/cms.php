@@ -24,6 +24,17 @@ Route::group([
     })->name('index');
 
     /**
+     * Orphanage
+     * 
+     */
+    Route::group([
+        'namespace' => 'Orphanage'
+    ], function(){
+        // Orphanage
+        Route::resource('orphanage', 'OrphanageController');
+    });
+
+    /**
      * Feature Manager
      * 
      */
