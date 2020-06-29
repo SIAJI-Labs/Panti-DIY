@@ -29,8 +29,8 @@ class ViewCmsServiceProvider extends ServiceProvider
             $wtitle = $wdesc = $wlogo = $wfavicon = null;
 
             // Append W-Value
-            $wtitle = "SIAJI";
-            $wdesc = "Skeleton Template";
+            $wtitle = "Social Care DIY";
+            $wdesc = "Non-Profit Organization";
             $wlogo = null;
             $wfavicon = null;
             $wversion = '2.0.2';
