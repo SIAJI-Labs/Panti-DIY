@@ -25,7 +25,7 @@ class OrphanageController extends Controller
      */
     public function create()
     {
-        //
+        return view('content.cms.orphanage.orphanage.create');
     }
 
     /**
