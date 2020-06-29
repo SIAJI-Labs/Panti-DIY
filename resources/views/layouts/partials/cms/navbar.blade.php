@@ -9,7 +9,7 @@
             <a href="{{ route('cms.index') }}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Profile</a>
+            <a href="{{ route('cms.profile.index') }}" class="nav-link">Profile</a>
         </li>
     </ul>
 
