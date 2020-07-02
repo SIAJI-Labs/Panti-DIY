@@ -34,6 +34,16 @@
                 </a>
             </li>
 
+            <li class="nav-header text-uppercase">Blog</li>
+            <li class="nav-item">
+                <a href="{{ route('cms.post.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'post' ? 'active' : '') : '' }}">
+                    <i class="nav-icon fas fa-home"></i>
+                    <p>
+                        Post
+                    </p>
+                </a>
+            </li>
+
             <li class="nav-header text-uppercase">Configuration</li>
             <li class="nav-item has-treeview {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'menu-open' : '') : '' }}">
                 <a href="#" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'feature-manager' ? 'active' : '') : '' }}">
