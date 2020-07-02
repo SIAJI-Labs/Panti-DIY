@@ -43,3 +43,7 @@ body {
 .card .card-header .card-tools {
   margin-left: auto;
 }
+
+.ck-editor__editable_inline {
+  height: 250px;
+}

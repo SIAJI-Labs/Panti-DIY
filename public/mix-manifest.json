@@ -1,7 +1,7 @@
 {
     "/assets/adminlte/js/app.js": "/assets/adminlte/js/app.js?id=a97298ee3576c3feb17b",
     "/assets/adminlte/css/app.css": "/assets/adminlte/css/app.css?id=dc2181e511189ea68bcc",
-    "/assets/adminlte/css/siaji.css": "/assets/adminlte/css/siaji.css?id=f08d3f84c89351a29cb3",
+    "/assets/adminlte/css/siaji.css": "/assets/adminlte/css/siaji.css?id=bbc6bcd980b6b1bdb593",
     "/assets/plugins/sweetalert2/css/sweetalert2.css": "/assets/plugins/sweetalert2/css/sweetalert2.css?id=448e2e427444da5fe11b",
     "/assets/plugins/sweetalert2/css/bootstrap-4.css": "/assets/plugins/sweetalert2/css/bootstrap-4.css?id=f6f43b21876256873794",
     "/assets/plugins/datatables/bs4/css/datatables.bs4.css": "/assets/plugins/datatables/bs4/css/datatables.bs4.css?id=751a5e967b7275aef523",
@@ -21,5 +21,6 @@
     "/assets/plugins/datatables/responsive/js/responsive.bootstrap4.js": "/assets/plugins/datatables/responsive/js/responsive.bootstrap4.js?id=1222ca8cc5309c099acd",
     "/assets/plugins/select2/css/select2.css": "/assets/plugins/select2/css/select2.css?id=a2194c2626489df39c39",
     "/assets/plugins/select2/css/select2-bootstrap4.css": "/assets/plugins/select2/css/select2-bootstrap4.css?id=dbe814f8641510b2300a",
-    "/assets/plugins/select2/js/select2.js": "/assets/plugins/select2/js/select2.js?id=8b9e61ffc46edc5610a2"
+    "/assets/plugins/select2/js/select2.js": "/assets/plugins/select2/js/select2.js?id=8b9e61ffc46edc5610a2",
+    "/assets/plugins/ckeditor/build/ckeditor.js": "/assets/plugins/ckeditor/build/ckeditor.js?id=4f899e5576a8321a17a5"
 }

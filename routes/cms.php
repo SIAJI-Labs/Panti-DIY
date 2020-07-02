@@ -24,6 +24,17 @@ Route::group([
     })->name('index');
 
     /**
+     * Blog
+     * 
+     */
+    Route::group([
+        'namespace' => 'Blog'
+    ], function(){
+        // Post
+        Route::resource('post', 'PostController');
+    });
+    
+    /**
      * Orphanage
      * 
      */

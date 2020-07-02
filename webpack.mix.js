@@ -67,3 +67,7 @@ mix.copy('node_modules/admin-lte/plugins/datatables-responsive/js/responsive.boo
 mix.copy('node_modules/admin-lte/plugins/select2/css/select2.css', 'public/assets/plugins/select2/css/select2.css');
 mix.copy('node_modules/admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.css', 'public/assets/plugins/select2/css/select2-bootstrap4.css');
 mix.copy('node_modules/admin-lte/plugins/select2/js/select2.js', 'public/assets/plugins/select2/js/select2.js');
+// CKEditor
+mix.scripts([
+    'resources/assets/adminlte/plugins/ckeditor/build/ckeditor.js'
+], 'public/assets/plugins/ckeditor/build/ckeditor.js').version();
