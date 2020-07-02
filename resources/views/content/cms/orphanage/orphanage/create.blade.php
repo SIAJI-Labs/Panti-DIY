@@ -74,9 +74,10 @@
         </div>
     </div>
     <!-- /.card-body -->
-    <div class="card-footer">
+    <div class="card-footer text-right">
         <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-sync-alt mr-1"></i>Reset</button>
+            <button type="button" class="btn btn-sm btn-danger">Reset</button>
+            <button type="button" class="btn btn-sm btn-primary">Submit</button>
         </div>
     </div>
     <!-- /.card-footer-->
@@ -84,8 +85,83 @@
 @endsection
 
 @section('js_plugins')
-<script src="https://ckeditor.com/apps/ckfinder/3.5.0/ckfinder.js"></script>
-<script src="{{ mix('assets/plugins/ckeditor5/build/ckeditor.js') }}"></script>
-<script src="{{ mix('assets/plugins/ckeditor5/build/config.js') }}"></script>
+{{-- CKEditor --}}
+<script src="{{ mix('assets/plugins/ckeditor/build/ckeditor.js') }}"></script>
 <script src="{{ mix('assets/plugins/bs-custom-file-input/bs-custom-file-input.js') }}"></script>
+@endsection
+
+@section('js_inline')
+<script>
+    const watchdog = new CKSource.Watchdog();
+    window.watchdog = watchdog;
+    watchdog.setCreator( ( element, config ) => {
+        return CKSource.Editor
+            .create( element, config )
+            .then( editor => {
+                return editor;
+            });
+    });
+    watchdog.setDestructor( editor => {
+        return editor.destroy();
+    });
+    watchdog.on( 'error', handleError );
+    watchdog.create( document.querySelector( '.ckeditor' ), {	
+        height: 500,	
+        toolbar: {
+            items: [
+                'heading',
+                '|',
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                'subscript',
+                'superscript',
+                '|',
+                'undo',
+                'redo',
+                'specialCharacters',
+                'link',
+                'bulletedList',
+                'numberedList',
+                '|',
+                'fontBackgroundColor',
+                'fontColor',
+                'highlight',
+                'fontFamily',
+                'fontSize',
+                '|',
+                'alignment',
+                'indent',
+                'outdent',
+                '|',
+                'blockQuote',
+                'horizontalLine',
+                'code',
+                'codeBlock',
+                '|',
+                'insertTable',
+                'mediaEmbed',
+                'removeFormat'
+            ]
+        },
+        language: 'en',
+        image: {
+            toolbar: [
+                'imageTextAlternative',
+                'imageStyle:full',
+                'imageStyle:side'
+            ]
+        },
+        licenseKey: '',
+    })
+    .catch( handleError );
+		
+    function handleError( error ) {
+        console.error( 'Oops, something gone wrong!' );
+        console.error( 'Please, report the following error in the https://github.com/ckeditor/ckeditor5 with the build id and the error stack trace:' );
+        console.warn( 'Build id: 8hx85als4qzm-4akfeg29g53u' );
+        console.error( error );
+    }
+</script>
 @endsection
