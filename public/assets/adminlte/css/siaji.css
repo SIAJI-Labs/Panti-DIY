@@ -47,3 +47,22 @@ body {
 .ck-editor__editable_inline {
   height: 250px;
 }
+
+.ck.ck-dropdown .ck-tooltip_s {
+  display: none !important;
+}
+.ck.ck-dropdown:hover .ck-off .ck-tooltip_s {
+  display: block !important;
+}
+.ck.ck-dropdown:hover .ck-on .ck-tooltip_s {
+  display: none !important;
+}
+
+@media only screen and (max-width: 425px) {
+  .ck.ck-dropdown__panel {
+    width: 75vw !important;
+  }
+  .ck.ck-dropdown__panel .ck-toolbar__items {
+    flex-wrap: wrap !important;
+  }
+}
