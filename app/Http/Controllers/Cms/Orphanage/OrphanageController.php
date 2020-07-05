@@ -2,12 +2,36 @@
 
 namespace App\Http\Controllers\Cms\Orphanage;
 
-use App\Http\Controllers\Controller;
+use Storage;
+use Carbon\Carbon;
 use App\Models\Orphanage\Orphanage;
+
+use App\Http\Requests\Orphanage\OrphanageStoreRequest;
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Orphanage\OrphanageUpdateRequest;
 use Illuminate\Http\Request;
 
 class OrphanageController extends Controller
 {
+    protected $file_location = 'images/orphanage';
+    public function imageStore($file, $data = null)
+    {
+        if(!empty($data)){
+            // If Second Parameter is not empty, delete old files
+            Storage::delete($this->file_location.'/'.$data);
+        }
+
+        $uploadedFile = $file;        
+        $size = getimagesize($uploadedFile);
+        $filename = 'orphanage-'.(Carbon::now()->timestamp+rand(1,1000));
+        $fullname = $filename.'.'.strtolower($uploadedFile->getClientOriginalExtension());
+        $filesize = $uploadedFile->getSize();
+        $path = $uploadedFile->storeAs($this->file_location, $fullname);
+
+        return $fullname;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -34,9 +58,23 @@ class OrphanageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OrphanageStoreRequest $request)
     {
-        //
+        $data = new Orphanage;
+        $data->name = $request->name;
+        $data->slug = $request->slug;
+        $data->description = $request->description;
+        
+        if($request->hasFile('logo')){
+            $logo = $this->imageStore($request->logo);
+            $data->logo = $logo;
+        }
+        $data->save();
+
+        return redirect()->route('cms.orphanage.index')->with([
+            'status' => 'success',
+            'message' => 'Successfully stored new Orphanage Data'
+        ]);
     }
 
     /**
@@ -45,7 +83,7 @@ class OrphanageController extends Controller
      * @param  \App\Models\Orphanage\Orphanage  $orphanage
      * @return \Illuminate\Http\Response
      */
-    public function show(Orphanage $orphanage)
+    public function show($id)
     {
         //
     }
@@ -56,9 +94,12 @@ class OrphanageController extends Controller
      * @param  \App\Models\Orphanage\Orphanage  $orphanage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Orphanage $orphanage)
+    public function edit($id)
     {
-        //
+        $data = Orphanage::findOrFail($id);
+        return view('content.cms.orphanage.orphanage.edit', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -68,9 +109,23 @@ class OrphanageController extends Controller
      * @param  \App\Models\Orphanage\Orphanage  $orphanage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Orphanage $orphanage)
+    public function update(OrphanageUpdateRequest $request, $id)
     {
-        //
+        $data = Orphanage::findOrFail($id);
+        $data->name = $request->name;
+        $data->slug = $request->slug;
+        $data->description = $request->description;
+        
+        if($request->hasFile('logo')){
+            $logo = $this->imageStore($request->logo, $data->logo);
+            $data->logo = $logo;
+        }
+        $data->save();
+
+        return redirect()->route('cms.orphanage.index')->with([
+            'status' => 'success',
+            'message' => 'Successfully updated Orphanage Data'
+        ]);
     }
 
     /**
@@ -79,7 +134,7 @@ class OrphanageController extends Controller
      * @param  \App\Models\Orphanage\Orphanage  $orphanage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Orphanage $orphanage)
+    public function destroy($id)
     {
         //
     }

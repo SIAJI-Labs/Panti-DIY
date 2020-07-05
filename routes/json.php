@@ -66,8 +66,12 @@ Route::group([
          * Orphanage
          * 
          */
-        // Orphanage
-        Route::get('orphanage', 'OrphanageController@datatableAll')->name('orphanage.all');
+        Route::group([
+            'namespace' => 'Orphanage'
+        ], function(){
+            // Orphanage
+            Route::get('orphanage', 'OrphanageController@datatableAll')->name('orphanage.all');
+        });
 
         /**
          * Feature Manager

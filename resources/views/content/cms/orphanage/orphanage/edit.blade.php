@@ -1,9 +1,9 @@
 @extends('layouts.cms', [
-    'wsecond_title' => 'Orphanage: Create',
+    'wsecond_title' => 'Orphanage: Edit',
     'sidebar_menu' => 'orphanage',
     'sidebar_submenu' => 'list',
     'wheader' => [
-        'header_title' => 'Orphanage: Create',
+        'header_title' => 'Orphanage: Edit',
         'header_breadcrumb' => [
             [
                 'title' => 'Dashboard',
@@ -14,7 +14,7 @@
                 'is_active' => false,
                 'url' => route('cms.orphanage.index')
             ], [
-                'title' => 'Create',
+                'title' => 'Edit',
                 'is_active' => true,
                 'url' => null
             ]
@@ -23,11 +23,12 @@
 ])
 
 @section('content')
-<form class="card card-primary card-outline" action="{{ route('cms.orphanage.store') }}" method="POST">
+<form class="card card-primary card-outline" action="{{ route('cms.orphanage.update', $data->id) }}" method="POST">
     @csrf
+    @method('PUT')
 
     <div class="card-header">
-        <h3 class="card-title">Create new Orphanage</h3>
+        <h3 class="card-title">Edit Orphanage Data</h3>
 
         <div class="card-tools">
             <a href="{{ route('cms.orphanage.index') }}" class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Back to Orphanage List">
@@ -38,14 +39,14 @@
     <div class="card-body">
         <div class="form-group">
             <label>Name</label>
-            <input type="text" name="name" id="input-name" class="form-control @error('name') is-invalid @enderror" placeholder="Name" onkeyup="generateSlug('name', 'slug');" value="{{ old('name') }}">
+            <input type="text" name="name" id="input-name" class="form-control @error('name') is-invalid @enderror" placeholder="Name" onkeyup="generateSlug('name', 'slug');" value="{{ $data->name }}">
             @error('name')
             <span class="invalid-feedback">{{ $message }}</span>
             @enderror
         </div>
         <div class="form-group">
             <label>Slug</label>
-            <input type="text" name="slug" id="input-slug" class="form-control @error('slug') is-invalid @enderror" placeholder="Slug" value="{{ old('slug') }}">
+            <input type="text" name="slug" id="input-slug" class="form-control @error('slug') is-invalid @enderror" placeholder="Slug" value="{{ $data->slug }}">
             @error('slug')
             <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -54,8 +55,8 @@
             <div class="row preview-container">
                 <div class="col-12 col-lg-3">
                     <div class="img-preview mb-2">
-                        <button type="button" class="btn btn-sm btn-danger d-block mb-2 mx-auto btn-preview_remove" onclick="removeCustomPreview($(this), '')" disabled>Reset Preview</button>
-                        <img class="img-responsive" width="100%;" style="padding:.25rem;background:#eee;display:block;">
+                        <button type="button" class="btn btn-sm btn-danger d-block mb-2 mx-auto btn-preview_remove" onclick="removeCustomPreview($(this), '{{ !empty($data->logo) ? asset('images/orphanage/'.$data->logo) : '' }}')" disabled>Reset Preview</button>
+                        <img class="img-responsive" width="100%;" style="padding:.25rem;background:#eee;display:block;" @if(!empty($data->logo)) src="{{ asset('images/orphanage/'.$data->logo) }}" @endif>
                     </div>
                 </div>
                 <div class="col-12 col-lg-9">
@@ -65,14 +66,14 @@
                         @error('logo')
                         <div class='invalid-feedback'>{{ $message }}</div>
                         @enderror
-                        <small class="text-muted">Suggestion: Use a picture PNG extension / Accepted Extension : jpg, jpeg, and png / Max File Size is 500kb.</small>
+                        <small class="text-muted">Suggestion: Use a picture PNG extension / Leave it empty to keep old data / Accepted Extension : jpg, jpeg, and png / Max File Size is 500kb.</small>
                     </div>
                 </div>
             </div>
         </div>
         <div class="form-group">
             <label>Description</label>
-            <textarea class="ckeditor form-control @error('description') is-invalid @enderror" name="description">{!! old('description') !!}</textarea>
+            <textarea class="ckeditor form-control @error('description') is-invalid @enderror" name="description">{!! $data->description !!}</textarea>
             @error('description')
             <div class='invalid-feedback'>{{ $message }}</div>
             @enderror
