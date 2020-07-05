@@ -23,7 +23,9 @@
 ])
 
 @section('content')
-<div class="card">
+<form class="card" action="{{ route('cms.post.store') }}" method="POST">
+    @csrf
+
     <div class="card-header">
         <h3 class="card-title">Create new Post</h3>
 
@@ -35,15 +37,32 @@
     </div>
     <div class="card-body">
         <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title" id="input-title" class="form-control @error('title') is-invalid @enderror" placeholder="Post Title">
+            @error('title')
+            <span class="invalid-feedback">{{ $message }}</span>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label>Slug</label>
+            <input type="text" name="slug" id="input-slug" class="form-control @error('slug') is-invalid @enderror" placeholder="Post Slug">
+            @error('slug')
+            <span class="invalid-feedback">{{ $message }}</span>
+            @enderror
+        </div>
+        <div class="form-group">
             <div class="ckeditor"></div>
         </div>
     </div>
     <!-- /.card-body -->
-    <div class="card-footer">
-        Footer
+    <div class="card-footer text-right">
+        <div class="btn-group float-right">
+            <button type="button" id="button-reset" class="btn btn-sm btn-danger">Reset</button>
+            <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+        </div>
     </div>
     <!-- /.card-footer-->
-</div>
+</form>
 @endsection
 
 @section('js_plugins')

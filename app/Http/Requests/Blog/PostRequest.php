@@ -23,8 +23,22 @@ class PostRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->segment(3);
         return [
-            //
+            'title' => ['required', 'string', 'max:191'],
+            'slug' => ['required', 'string', 'max:191', 'regex:/^[a-z0-9_]+(?:-[_a-z0-9]+)*$/']
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'slug.regex' => 'The slug format is invalid. Supported format: a-z, 0-9, - (dash) and _ (underscore)',
         ];
     }
 }
