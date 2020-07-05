@@ -112,12 +112,18 @@
         <script src="{{ mix('assets/adminlte/js/siaji.js') }}"></script>
         
         <script>
+            var ajax_timer = null;
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 beforeSend: () => {
                     // show loading dialog // works
+                    if(ajax_timer){
+                        clearTimeout(ajax_timer)
+                        ajax_timer = null;
+                    }
+                    
                     if($('.ajax-toast').length < 1){
                         ajax_timer = setTimeout((e) => {
                             $(document).Toasts('create', {
@@ -126,8 +132,9 @@
                                 close: false,
                                 body: 'Please wait a bit, data process is running.'
                             });
-                        }, 1000)
+                        }, 1000);
                     }
+                    console.log(ajax_timer);
                 },
                 complete: (xhr, stat) => {
                     // hide dialog // works
@@ -136,8 +143,11 @@
                             $('.ajax-toast').remove();
                         }, 0);
                     });
-                    clearTimeout(ajax_timer);
-                }
+                    if(ajax_timer){
+                        clearTimeout(ajax_timer)
+                        ajax_timer = null;
+                    }
+                },
             });
             
             function resend_link(){
