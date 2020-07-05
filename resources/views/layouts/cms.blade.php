@@ -118,11 +118,22 @@
                 },
                 beforeSend: () => {
                     // show loading dialog // works
-                    $("#progress-alert").slideDown();
+                    if($('.ajax-toast').length < 1){
+                        $(document).Toasts('create', {
+                            class: 'bg-warning ajax-toast m-3', 
+                            title: 'Processing',
+                            close: false,
+                            body: 'Please wait a bit, data process is running.'
+                        });
+                    }
                 },
                 complete: (xhr, stat) => {
                     // hide dialog // works
-                    $("#progress-alert").slideUp();
+                    $('.ajax-toast').slideUp('slow', () => {
+                        setTimeout((e) => {
+                            $('.ajax-toast').remove();
+                        }, 0);
+                    });
                 }
             });
             

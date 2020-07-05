@@ -22,5 +22,7 @@
     "/assets/plugins/select2/css/select2.css": "/assets/plugins/select2/css/select2.css?id=a2194c2626489df39c39",
     "/assets/plugins/select2/css/select2-bootstrap4.css": "/assets/plugins/select2/css/select2-bootstrap4.css?id=dbe814f8641510b2300a",
     "/assets/plugins/select2/js/select2.js": "/assets/plugins/select2/js/select2.js?id=8b9e61ffc46edc5610a2",
-    "/assets/plugins/ckeditor/build/ckeditor.js": "/assets/plugins/ckeditor/build/ckeditor.js?id=4f899e5576a8321a17a5"
+    "/assets/plugins/ckeditor/build/ckeditor.js": "/assets/plugins/ckeditor/build/ckeditor.js?id=4f899e5576a8321a17a5",
+    "/assets/plugins/toastr/toastr.css": "/assets/plugins/toastr/toastr.css?id=6dd68d17e33a0641e9d5",
+    "/assets/plugins/toastr/toastr.min.js": "/assets/plugins/toastr/toastr.min.js?id=8ee1218b09fb02d43fcf"
 }
