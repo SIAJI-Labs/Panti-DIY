@@ -119,12 +119,14 @@
                 beforeSend: () => {
                     // show loading dialog // works
                     if($('.ajax-toast').length < 1){
-                        $(document).Toasts('create', {
-                            class: 'bg-warning ajax-toast m-3', 
-                            title: 'Processing',
-                            close: false,
-                            body: 'Please wait a bit, data process is running.'
-                        });
+                        ajax_timer = setTimeout((e) => {
+                            $(document).Toasts('create', {
+                                class: 'bg-warning ajax-toast m-3', 
+                                title: 'Processing',
+                                close: false,
+                                body: 'Please wait a bit, data process is running.'
+                            });
+                        }, 1000)
                     }
                 },
                 complete: (xhr, stat) => {
@@ -134,6 +136,7 @@
                             $('.ajax-toast').remove();
                         }, 0);
                     });
+                    clearTimeout(ajax_timer);
                 }
             });
             
