@@ -25,15 +25,15 @@ class Orphanage extends Model
      */
     public function orphanageGallery()
     {
-        return $this->belongsTo('App\Models\OrphanageGallery', 'orphanage_id');
+        return $this->belongsTo('App\Models\Orphanage\OrphanageGallery', 'orphanage_id');
     }
     public function orphanagePic()
     {
-        return $this->belongsTo('App\Models\OrphanagePic', 'orphanage_id');
+        return $this->belongsTo('App\Models\Orphanage\OrphanagePic', 'orphanage_id');
     }
     public function orphanageUpdate()
     {
-        return $this->belongsTo('App\Models\OrphanageUpdate', 'orphanage_id');
+        return $this->belongsTo('App\Models\Orphanage\OrphanageUpdate', 'orphanage_id');
     }
 
     public function province()

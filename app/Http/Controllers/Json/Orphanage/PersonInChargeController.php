@@ -2,16 +2,27 @@
 
 namespace App\Http\Controllers\Json\Orphanage;
 
-use App\Models\Orphanage\Orphanage;
+use App\Models\Orphanage\OrphanagePic;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class OrphanageController extends Controller
+class PersonInChargeController extends Controller
 {
     public function jsonAll()
     {
-        $data = Orphanage::get();
+        $data = OrphanagePic::with('orphanage')->get();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data Fetched',
+            'data' => $data
+        ]);
+    }
+
+    public function jsonId($id)
+    {
+        $data = OrphanagePic::with('orphanage')->findOrFail($id);
 
         return response()->json([
             'status' => 'success',
@@ -26,12 +37,13 @@ class OrphanageController extends Controller
      */
     public function selectAll(Request $request)
     {
-        $data = Orphanage::query();
+        $data = OrphanagePic::query();
         $last_page = null;
         
         if($request->has('search') && $request->search != ''){
             // Apply search param
-            $data = $data->where('name', 'like', '%'.$request->search.'%');
+            $data = $data->where('name', 'like', '%'.$request->search.'%')
+                ->orWhere('contact', 'like', '%'.$request->search.'%');
         }
 
         if($request->has('page')){

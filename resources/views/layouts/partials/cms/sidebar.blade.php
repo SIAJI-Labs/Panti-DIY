@@ -55,9 +55,15 @@
                 </a>
                 <ul class="nav nav-treeview" {{ !empty($sidebar_menu) ? ($sidebar_menu == 'orphanage' ? 'style="display: block;"' : '') : '' }}>
                     <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'list' ? 'active' : '') : '' }}">
-                        <a href="{{ route('cms.orphanage.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'statistic' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.orphanage.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'list' ? 'active' : '') : '' }}">
                             <i class="far fa-circle nav-icon"></i>
                             <p>List</p>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'pic' ? 'active' : '') : '' }}">
+                        <a href="{{ route('cms.orphanage-pic.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_submenu) ? ($sidebar_submenu == 'pic' ? 'active' : '') : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Person in Charge</p>
                         </a>
                     </li>
                 </ul>

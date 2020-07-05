@@ -29,6 +29,9 @@ Route::group([
         // Orphanage
         Route::get('orphanage', 'OrphanageController@jsonAll')->name('orphanage.all');
         Route::get('orphanage/{id}', 'OrphanageController@jsonId')->name('orphanage.id');
+        // Orphanage PIC
+        Route::get('orphanage-pic', 'PersonInChargeController@jsonAll')->name('orphanage-pic.all');
+        Route::get('orphanage-pic/{id}', 'PersonInChargeController@jsonId')->name('orphanage-pic.id');
     });
 
     /**
@@ -92,6 +95,7 @@ Route::group([
         ], function(){
             // Orphanage
             Route::get('orphanage', 'OrphanageController@datatableAll')->name('orphanage.all');
+            Route::get('orphanage-pic', 'PersonInChargeController@datatableAll')->name('orphanage-pic.all');
         });
 
         /**
@@ -141,6 +145,17 @@ Route::group([
             Route::get('district', 'DistrictController@selectAll')->name('district.all');
             // Village
             Route::get('village', 'VillageController@selectAll')->name('village.all');
+        });
+
+        /**
+         * Orphanage
+         * 
+         */
+        Route::group([
+            'namespace' => 'Orphanage'
+        ], function(){
+            // Orphanage
+            Route::get('orphanage', 'OrphanageController@selectAll')->name('orphanage.all');
         });
     });
 });

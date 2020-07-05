@@ -43,6 +43,8 @@ Route::group([
     ], function(){
         // Orphanage
         Route::resource('orphanage', 'OrphanageController');
+        // Person In Charge
+        Route::resource('orphanage-pic', 'PersonInChargeController');
     });
 
     /**

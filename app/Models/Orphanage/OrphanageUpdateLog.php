@@ -18,6 +18,6 @@ class OrphanageUpdateLog extends Model
      */
     public function orphanageUpdate()
     {
-        return $this->belongsTo('App\Models\OrphanageUpdate', 'orphanage_update_id');
+        return $this->belongsTo('App\Models\Orphanage\OrphanageUpdate', 'orphanage_update_id');
     }
 }

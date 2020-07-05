@@ -20,6 +20,6 @@ class OrphanageGallery extends Model
      */
     public function orphanage()
     {
-        return $this->belongsTo('App\Models\Orphanage', 'orphanage_id');
+        return $this->belongsTo('App\Models\Orphanage\Orphanage', 'orphanage_id');
     }
 }
