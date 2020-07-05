@@ -129,7 +129,7 @@
                 },
                 complete: (xhr, stat) => {
                     // hide dialog // works
-                    $('.ajax-toast').slideUp('slow', () => {
+                    $('.ajax-toast').fadeOut('300', (e) => {
                         setTimeout((e) => {
                             $('.ajax-toast').remove();
                         }, 0);
