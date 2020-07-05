@@ -61,6 +61,11 @@ class OrphanageController extends Controller
     public function store(OrphanageStoreRequest $request)
     {
         $data = new Orphanage;
+        $data->province_id = $request->province_id ?? null;
+        $data->regency_id = $request->regency_id ?? null;
+        $data->district_id = $request->district_id ?? null;
+        $data->village_id = $request->village_id ?? null;
+
         $data->name = $request->name;
         $data->slug = $request->slug;
         $data->description = $request->description;
@@ -112,6 +117,11 @@ class OrphanageController extends Controller
     public function update(OrphanageUpdateRequest $request, $id)
     {
         $data = Orphanage::findOrFail($id);
+        $data->province_id = $request->province_id ?? null;
+        $data->regency_id = $request->regency_id ?? null;
+        $data->district_id = $request->district_id ?? null;
+        $data->village_id = $request->village_id ?? null;
+        
         $data->name = $request->name;
         $data->slug = $request->slug;
         $data->description = $request->description;

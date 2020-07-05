@@ -18,7 +18,11 @@ class Regency extends Model
      */
     public function district()
     {
-        return $this->belongsTo('App\Models\Location\District', 'regency_id');
+        return $this->hasMany('App\Models\Location\District', 'regency_id');
+    }
+    public function orphanage()
+    {
+        return $this->hasMany('App\Models\Orphanage\Orphanage', 'regency_id');
     }
 
     /**

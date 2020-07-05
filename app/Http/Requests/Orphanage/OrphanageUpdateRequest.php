@@ -26,6 +26,11 @@ class OrphanageUpdateRequest extends FormRequest
         // Get ID from Route
         $id = $this->orphanage;
         return [
+            'province_id' => ['nullable', 'exists:provinces,id'],
+            'regency_id' => ['nullable', 'exists:regencies,id'],
+            'district_id' => ['nullable', 'exists:districts,id'],
+            'village_id' => ['nullable', 'exists:villages,id'],
+
             'name' => ['required', 'string', 'max:191'],
             'slug' => ['required', 'string', 'max:191', 'regex:/^[a-z0-9_]+(?:-[_a-z0-9]+)*$/', 'unique:orphanages,slug,'.$id],
             'logo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:500'],

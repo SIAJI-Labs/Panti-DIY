@@ -23,9 +23,13 @@ Route::group([
      * Orphanage
      * 
      */
-    // Orphanage
-    Route::get('orphanage', 'OrphanageController@jsonAll')->name('orphanage.all');
-    Route::get('orphanage/{id}', 'OrphanageController@jsonId')->name('orphanage.id');
+    Route::group([
+        'namespace' => 'Orphanage'
+    ], function(){
+        // Orphanage
+        Route::get('orphanage', 'OrphanageController@jsonAll')->name('orphanage.all');
+        Route::get('orphanage/{id}', 'OrphanageController@jsonId')->name('orphanage.id');
+    });
 
     /**
      * Feature Manager
@@ -53,6 +57,23 @@ Route::group([
     // Contact Data
     Route::get('contact-data', 'ContactDataController@jsonAll')->name('contact-data.all');
     Route::get('contact-data/{id}', 'ContactDataController@jsonId')->name('contact-data.id');
+
+    /**
+     * Location
+     * 
+     */
+    Route::group([
+        'namespace' => 'Location'
+    ], function(){
+        // Province
+        Route::get('province', 'ProvinceController@jsonAll')->name('province.all');
+        // Regency
+        Route::get('regency', 'RegencyController@jsonAll')->name('regency.all');
+        // District
+        Route::get('district', 'DistrictController@jsonAll')->name('district.all');
+        // Village
+        Route::get('village', 'VillageController@jsonAll')->name('village.all');
+    });
 
     /**
      * JSON Datatable
@@ -95,5 +116,31 @@ Route::group([
          */
         // Contact Data
         Route::get('contact-data', 'ContactDataController@datatableAll')->name('contact-data.all');
+    });
+
+    /**
+     * JSON Select2
+     * 
+     */
+    Route::group([
+        'prefix' => 'select2',
+        'as' => 'select2.',
+    ], function(){
+        /**
+         * Location
+         * 
+         */
+        Route::group([
+            'namespace' => 'Location'
+        ], function(){
+            // Province
+            Route::get('province', 'ProvinceController@selectAll')->name('province.all');
+            // Regency
+            Route::get('regency', 'RegencyController@selectAll')->name('regency.all');
+            // District
+            Route::get('district', 'DistrictController@selectAll')->name('district.all');
+            // Village
+            Route::get('village', 'VillageController@selectAll')->name('village.all');
+        });
     });
 });

@@ -19,4 +19,8 @@ class Province extends Model
     {
         return $this->hasMany('App\Models\Location\Regency', 'province_id');
     }
+    public function orphanage()
+    {
+        return $this->hasMany('App\Models\Orphanage\Orphanage', 'province_id');
+    }
 }
