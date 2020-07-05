@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Cms\Blog;
 use App\Models\Blog\Post;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Blog\PostRequest;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -35,7 +36,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         //
     }

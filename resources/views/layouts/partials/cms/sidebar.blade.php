@@ -37,7 +37,7 @@
             <li class="nav-header text-uppercase">Blog</li>
             <li class="nav-item">
                 <a href="{{ route('cms.post.index') }}" class="nav-link d-flex align-items-center {{ !empty($sidebar_menu) ? ($sidebar_menu == 'post' ? 'active' : '') : '' }}">
-                    <i class="nav-icon fas fa-home"></i>
+                    <i class="nav-icon fab fa-blogger-b"></i>
                     <p>
                         Post
                     </p>
