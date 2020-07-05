@@ -11,12 +11,13 @@
 
 Basic Engine use Laravel as Framework to develop it's feature. Other than that, we also use some amazing plugin, themes, etc
 
-- [Laravel](https://laravel.com).
-- [Bootstrap](https://getbootstrap.com/).
-- [jQuery](https://jquery.com/).
-- [AdminLTE](https://adminlte.io/).
-- [Fontawesome](https://fontawesome.com/).
-- [DataTable](https://datatables.net/).
-- [Select2](https://select2.org/).
-- [Sweetalert2](https://sweetalert2.github.io/).
-- [Fontawesome Picker](https://itsjavi.com/fontawesome-iconpicker/).
+- [Laravel](https://laravel.com)
+- [Bootstrap](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
+- [AdminLTE](https://adminlte.io/)
+- [Fontawesome](https://fontawesome.com/)
+- [DataTable](https://datatables.net/)
+- [Select2](https://select2.org/)
+- [Sweetalert2](https://sweetalert2.github.io/)
+- [Fontawesome Picker](https://itsjavi.com/fontawesome-iconpicker/)
+- [CKEditor](https://ckeditor.com/)
